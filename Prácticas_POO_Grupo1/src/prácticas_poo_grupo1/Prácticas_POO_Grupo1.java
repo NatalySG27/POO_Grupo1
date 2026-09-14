@@ -15,6 +15,7 @@ public class Prácticas_POO_Grupo1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        System.out.println("Trabajando en la semana 2");
     }
     
 }
