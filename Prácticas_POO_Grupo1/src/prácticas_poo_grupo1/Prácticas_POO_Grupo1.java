@@ -7,6 +7,7 @@ public class Prácticas_POO_Grupo1 {
         // TODO code application logic here
         System.out.println("Trabajando en la semana 2");
         System.out.println("Cambio de Anderson listo");
+        System.out.println("cambio de cristofer");
     }
     
 }
