@@ -35,7 +35,26 @@ public class Persona {
     }
 
     public void setNro_documento(String nro_documento) {
-        this.nro_documento = nro_documento;
+        if (this.tipo_documento == null){
+            System.out.println("Primero debe ingresar el tipo de documento");
+            return;
+        }
+
+        if(this.tipo_documento.equalsIgnoreCase("DNI")){
+            if(nro_documento.length() == 8){
+                this.nro_documento = nro_documento;
+            }else{
+                System.out.println("El nro de DNI debe tener 8 numeros!!!");
+            }
+        }else{
+            if(this.tipo_documento.equalsIgnoreCase("Carnet de Extranjeria")){
+                if(nro_documento.length() == 10){
+                    this.nro_documento = nro_documento;
+                }else{
+                    System.out.println("El nro del carnet debe tener 10 numeros!!!");
+                }
+            }
+        }
     }
 
     public String getNombre() {
