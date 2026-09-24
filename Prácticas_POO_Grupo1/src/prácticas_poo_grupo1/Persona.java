@@ -23,7 +23,11 @@ public class Persona {
     }
 
     public void setTipo_documento(String tipo_documento) {
-        this.tipo_documento = tipo_documento;
+        if(tipo_documento.equalsIgnoreCase("DNI") || tipo_documento.equalsIgnoreCase("Carnet de Extranjeria")){
+            this.tipo_documento = tipo_documento;
+        }else{
+            System.out.println("Tipo de documento no valido");
+        }
     }
 
     public String getNro_documento() {
