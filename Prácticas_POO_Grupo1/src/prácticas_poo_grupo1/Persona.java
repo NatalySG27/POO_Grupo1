@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to change this template
  */
 package prácticas_poo_grupo1;
 
@@ -87,5 +87,14 @@ public class Persona {
 
     public void setFecha_nacimiento(LocalDate fecha_nacimiento) {
         this.fecha_nacimiento = fecha_nacimiento;
+    }
+
+    public void verDatos() {
+        System.out.println("Persona TipoDoc: " + this.tipo_documento
+                + " NroDoc: " + this.nro_documento
+                + " Nombre: " + this.nombre
+                + " Apellido paterno: " + this.paterno
+                + " Apellido materno: " + this.materno
+                + " Fecha de nacimiento: " + this.fecha_nacimiento);
     }
 }
