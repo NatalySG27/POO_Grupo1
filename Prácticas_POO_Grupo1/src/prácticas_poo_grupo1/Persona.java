@@ -4,11 +4,17 @@
  */
 package prácticas_poo_grupo1;
 
+import java.time.LocalDate;
+
 /**
  *
- * @author JHEY
+ * @author natal
  */
 public class Persona {
-    
-    
+    String tipo_documento;
+    String nro_documento;
+    String nombre;
+    String paterno;
+    String materno;
+    LocalDate fecha_nacimiento;
 }
