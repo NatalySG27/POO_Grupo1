@@ -6,6 +6,9 @@ package prácticas_poo_grupo1;
 
 import java.time.LocalDate;
 
+    private String tipo_documento;
+    private String nro_documento;
+
 /**
  *
  * @author natal
@@ -16,5 +19,9 @@ public class Persona {
     String nombre;
     String paterno;
     String materno;
-    LocalDate fecha_nacimiento;
+    LocalDate fecha_nacimiento; 
+}
+public void verDatos() { 
+    System.out.println("Persona TipoDoc: " + this.tipo_documento
+            + " NroDoc: " + this.nro_documento);
 }
