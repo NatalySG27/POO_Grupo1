@@ -13,4 +13,11 @@ public class PersonaController {
     public void agregarPersona(Persona nuevapersona) {
         lista.add(nuevapersona);
     }
+    public void listarPersonas() {
+        System.out.println("La lista de personas es: ");
+        for(int i = 0; i < lista.size(); i++){
+            Persona aux = lista.get(i);
+            aux.verDatos();
+        }
+    }
 }
