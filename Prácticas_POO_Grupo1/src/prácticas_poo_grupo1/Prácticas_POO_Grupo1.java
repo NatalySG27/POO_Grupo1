@@ -59,4 +59,14 @@ public class Prácticas_POO_Grupo1 {
         System.out.println("\n----------------------------------------");
         controla.listarPersonas();
     }
+    
+    public static void realizarBusqueda(Scanner sc, PersonaController controla) {
+        System.out.println("\n----------------------------------------");
+        try {
+            System.out.println("Ingrese el número de documento que desea buscar: ");
+            controla.buscarPersona(sc.nextLine());
+        } catch(Exception e){
+            System.out.println("ERROR: Ocurrió un problema en la búsqueda.");
+        }
+    }
 }
