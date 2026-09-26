@@ -1,14 +1,23 @@
 
 package prácticas_poo_grupo1;
 
+import java.util.Scanner;
+
 public class Prácticas_POO_Grupo1 {
 
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Trabajando en la semana 2");
-        System.out.println("Prueba para git stash");
-        System.out.println("Cambio de Anderson listo");
-        System.out.println("cambio de cristofer");
-        System.out.println("Cambio listo");
+        Scanner sc = new Scanner(System.in);
+        PersonaController controla = new PersonaController();
+        String rpta = "si";
+        
+        System.out.println("=== SISTEMA DE REGISTRO DE PERSONAS ===");
+        
+        while(rpta.equalsIgnoreCase("si")) {
+            System.out.println("¿Desea ingresar otra persona? (si/no):");
+            rpta = sc.nextLine();
+        }
+        
+        sc.close();
     }   
 }
