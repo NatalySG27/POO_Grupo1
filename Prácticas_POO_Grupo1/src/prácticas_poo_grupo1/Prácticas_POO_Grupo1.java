@@ -10,7 +10,5 @@ public class Prácticas_POO_Grupo1 {
         System.out.println("Cambio de Anderson listo");
         System.out.println("cambio de cristofer");
         System.out.println("Cambio listo");
-    }
-    
+    }   
 }
-// Prueba de cambio para Git
