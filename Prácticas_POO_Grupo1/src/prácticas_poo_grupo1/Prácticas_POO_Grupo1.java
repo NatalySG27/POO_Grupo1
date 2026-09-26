@@ -1,6 +1,8 @@
 
 package prácticas_poo_grupo1;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
 public class Prácticas_POO_Grupo1 {
@@ -39,5 +41,17 @@ public class Prácticas_POO_Grupo1 {
         
         System.out.println("Ingrese apellido materno: ");
         p1.setMaterno(sc.nextLine());
+        
+        boolean fechaValida = false;
+        while(!fechaValida){
+            try {
+                System.out.println("Ingrese fecha de nacimiento (Formato AAAA-MM-DD): ");
+                p1.setFecha_nacimiento(LocalDate.parse(sc.nextLine()));
+                fechaValida = true;
+            } catch(DateTimeParseException e){
+                System.out.println("ERROR: Formato de fecha no válido. Use el formato AAAA-MM-DD.");
+            }
+        }
+        controla.agregarPersona(p1);
     }
 }
