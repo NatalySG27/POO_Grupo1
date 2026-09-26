@@ -20,14 +20,4 @@ public class PersonaController {
             aux.verDatos();
         }
     }
-        public void buscarPersona(String nrobuscado){
-        for(int i = 0; i < lista.size(); i++){
-            if(nrobuscado.equals(lista.get(i).getNro_documento())){
-                System.out.println("Persona encontrada y es: ");
-                lista.get(i).verDatos();
-                return;
-            }
-        }
-        System.out.println("Persona no encontrada");
-    }
 }
