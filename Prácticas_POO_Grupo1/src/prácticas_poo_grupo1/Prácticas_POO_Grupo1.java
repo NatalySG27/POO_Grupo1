@@ -17,7 +17,21 @@ public class Prácticas_POO_Grupo1 {
             System.out.println("¿Desea ingresar otra persona? (si/no):");
             rpta = sc.nextLine();
         }
-        
         sc.close();
-    }   
+    }
+    
+    public static void registrarPersona(Scanner sc, PersonaController controla) {
+        Persona p1 = new Persona();
+        System.out.println("Ingrese nro de documento: ");
+        p1.setNro_documento(sc.nextLine());
+        
+        System.out.println("Ingrese nombre: ");
+        p1.setNombre(sc.nextLine());
+        
+        System.out.println("Ingrese apellido paterno: ");
+        p1.setPaterno(sc.nextLine());
+        
+        System.out.println("Ingrese apellido materno: ");
+        p1.setMaterno(sc.nextLine());
+    }
 }
