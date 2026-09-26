@@ -54,4 +54,9 @@ public class Prácticas_POO_Grupo1 {
         }
         controla.agregarPersona(p1);
     }
+    
+    public static void mostrarListado(PersonaController controla) {
+        System.out.println("\n----------------------------------------");
+        controla.listarPersonas();
+    }
 }
