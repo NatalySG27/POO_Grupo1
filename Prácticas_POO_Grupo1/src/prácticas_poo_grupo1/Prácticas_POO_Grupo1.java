@@ -16,9 +16,13 @@ public class Prácticas_POO_Grupo1 {
         System.out.println("=== SISTEMA DE REGISTRO DE PERSONAS ===");
         
         while(rpta.equalsIgnoreCase("si")) {
+            registrarPersona(sc, controla);
             System.out.println("¿Desea ingresar otra persona? (si/no):");
             rpta = sc.nextLine();
         }
+        mostrarListado(controla);
+        realizarBusqueda(sc, controla);
+        
         sc.close();
     }
     
@@ -30,8 +34,10 @@ public class Prácticas_POO_Grupo1 {
             p1.setTipo_documento(sc.nextLine());
         }
         
-        System.out.println("Ingrese nro de documento: ");
-        p1.setNro_documento(sc.nextLine());
+        while(p1.getNro_documento() == null){
+            System.out.println("Ingrese nro de documento: ");
+            p1.setNro_documento(sc.nextLine());
+        }
         
         System.out.println("Ingrese nombre: ");
         p1.setNombre(sc.nextLine());
@@ -49,7 +55,7 @@ public class Prácticas_POO_Grupo1 {
                 p1.setFecha_nacimiento(LocalDate.parse(sc.nextLine()));
                 fechaValida = true;
             } catch(DateTimeParseException e){
-                System.out.println("ERROR: Formato de fecha no válido. Use el formato AAAA-MM-DD.");
+                System.out.println("ERROR: Formato de fecha no valido. Use el formato AAAA-MM-DD.");
             }
         }
         controla.agregarPersona(p1);
@@ -63,10 +69,10 @@ public class Prácticas_POO_Grupo1 {
     public static void realizarBusqueda(Scanner sc, PersonaController controla) {
         System.out.println("\n----------------------------------------");
         try {
-            System.out.println("Ingrese el número de documento que desea buscar: ");
+            System.out.println("Ingrese el numero de documento que desea buscar: ");
             controla.buscarPersona(sc.nextLine());
         } catch(Exception e){
-            System.out.println("ERROR: Ocurrió un problema en la búsqueda.");
+            System.out.println("ERROR: Ocurrio un problema en la busqueda.");
         }
     }
 }
