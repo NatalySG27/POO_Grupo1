@@ -1,11 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-<<<<<<< HEAD
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
-=======
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to change this template
->>>>>>> 5dd90c49a3c389aef7e9d996d359af992f9c8722
- */
+
 package prácticas_poo_grupo1;
 
 import java.time.LocalDate;
