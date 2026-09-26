@@ -22,6 +22,12 @@ public class Prácticas_POO_Grupo1 {
     
     public static void registrarPersona(Scanner sc, PersonaController controla) {
         Persona p1 = new Persona();
+        
+        while(p1.getTipo_documento() == null){
+            System.out.println("Ingrese tipo de documento (DNI / Carnet de Extranjeria): ");
+            p1.setTipo_documento(sc.nextLine());
+        }
+        
         System.out.println("Ingrese nro de documento: ");
         p1.setNro_documento(sc.nextLine());
         
